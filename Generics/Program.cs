@@ -11,6 +11,9 @@
 
             double output1 = FindMaxNumber.MaxFloatNumber(10.2, 3.3, 5.4);
             Console.WriteLine(output1);
+
+            string stringoutput = FindMaxNumber.MaxString("Strawberry","Apple","Banana");
+            Console.WriteLine(stringoutput);
         }
     }
 }
