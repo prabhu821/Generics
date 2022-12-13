@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Find Max Number");
+
+            int output = FindMaxNumber.MaxIntegerNumber(10, 3, 5);
+            Console.WriteLine(output);
         }
     }
 }
