@@ -9,7 +9,7 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect option \n1.Find Integer Max \n2.Find Float Max \n3.Find String Max " +
-                    "\n4.Generics Maximum \n5.Exit");
+                    "\n4.Generics Maximum \n5.Extend Generic Maximum \n6.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -32,6 +32,11 @@
                         GenericsMaximum<float> obj1 = new GenericsMaximum<float>(23.25f, 50.25f, 50.3f);
                         float result4 = obj1.FindMaxUsingGenerics(23.25f, 50.25f, 50.3f);
                         Console.WriteLine(result4);
+                        break;
+                    case 5:
+                        GenericMaximum<string> max = new GenericMaximum<string>("Apple", "Peach", "Banana", "Grapes");
+                        string maxString = max.GetMax();
+                        Console.WriteLine(maxString);
                         break;
                     default:
                         flag = false;
