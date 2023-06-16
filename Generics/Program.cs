@@ -8,7 +8,8 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect option \n1.Find Integer Max \n2.Find Float Max \n3.Find String Max \n4.Exit");
+                Console.WriteLine("\nSelect option \n1.Find Integer Max \n2.Find Float Max \n3.Find String Max " +
+                    "\n4.Generics Maximum \n5.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -23,6 +24,14 @@
                     case 3:
                         string result2 = FindMaximum.FindMaxString("Apple","Banana","Peach");
                         Console.WriteLine("Max String is: " + result2);
+                        break;
+                    case 4:
+                        GenericsMaximum<int> obj = new GenericsMaximum<int>(23, 50, 5);
+                        int result3 = obj.FindMaxUsingGenerics(23, 50, 5);
+                        Console.WriteLine(result3);
+                        GenericsMaximum<float> obj1 = new GenericsMaximum<float>(23.25f, 50.25f, 50.3f);
+                        float result4 = obj1.FindMaxUsingGenerics(23.25f, 50.25f, 50.3f);
+                        Console.WriteLine(result4);
                         break;
                     default:
                         flag = false;
